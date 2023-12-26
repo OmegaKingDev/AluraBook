@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap');
+
+:root{
+    --font-Poppins:'Poppins', sans-serif;;
+    --font-josefin: 'Josefin Sans', sans-serif;
+    --azul-degrade:linear-gradient(98deg, #002F52 35.49%, #326589 165.37%);
+}
+
+
+.cabeçalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+}
+
+.lista-menu{
+    display: none;
+    z-index: 10;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+}
+
+
+.container__botao:checked ~.lista-menu{
+    display: block;
+    position: absolute;
+    top: 90%;
+    background-color: var(--branco);
+    height: 21.5;
+    width: 18.75em;
+}
+
+.container__botao:checked ~.container__rotulo>.cabeçalho__menu-hamburguer{
+    background-image: url(../assets/MenuAberto.svg)  ;
+}
+
+
+.container__botao:checked~.container__rotulo{
+    background: var(--azul-degrade) no-repeat fixed center;
+    background-position: center;
+
+}
+
+.container__botao{
+    display: none;
+}
+
+
+.lista-menu__titulo{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-family: var(--font-family);
+    font-weight: 700;
+    padding-left: 1.5em;
+    color: #EB9B00;
+    
+}
+
+.lista-menu__item{
+    padding: 1em;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1em;
+    padding-left: 1.5em;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lista-menu__link{
+    text-decoration: none;
+    color: #002F52;
+    font-weight: 400;
+    
+}
+
+
+.cabeçalho__menu-hamburguer{
+    width: 3em;
+    height: 3em;
+    background-image: url(../assets/menuhambur.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position: center;
+}
+
+
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem{
+    padding: 1em;
+}
+
+.container__titulo {
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
+.container__texto{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .container__titulo,.container__titulo--negrito{
+        font-family: var(--font-josefin);
+        display: inline;
+        margin-top: 0.5em;
+
+    }
+
+    .container__titulo{
+        font-weight: 400;
+        font-size: 1.8em;
+    }
+
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+
+    .opcoes{
+        display: flex;
+        margin-top: 0.8em;
+    }
+
+    .opcoes__item{
+
+        font-family: var(--font-Poppins);
+        font-size: 1em;
+        font-weight: 400;
+        color: black;
+
+    }
+    
+    .opcoes__link{
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+
+    }
+
+    .lista-menu__item{
+        display: block;
+    }
+
+    .lista-menu__link{
+        color: black;
+        margin-top: 2em;
+        
+    }
+
+
+    .container__imagem-transparente {
+        display: none;
+    }
+
+    .cabeçalho__menu-hamburguer{
+        display: none;
+    }
+
+    .opcoes__botao{
+        display: none;
+    
+    }
+
+
+    .opcoes__botao:checked~.lista-menu{
+        display: block;
+        width: auto;
+        background-color: white;
+        position: absolute;
+        top: 90%;
+        width: 12em;
+    }
+
+    .opcoes__botao:checked~.container__rotulo>.opcoes__item{
+        background: var(--azul-degrade);
+        color: white;
+
+    }
+
+
+    .opcoes__item{
+        padding: 1em;
+    }
+
+
+    .lista-menu__item:hover{
+        background: var(--azul-degrade);
+        color: white;
+    }
+    
+    .lista-menu__item:hover > .lista-menu__link{
+        color: white;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1728px){
+
+
+    .cabeçalho{
+        padding: 0 2em;
+    }
+
+
+    .opcoes{
+        margin-right: 30%;
+    }
+
+
+    .container__link{
+        display: flex;
+        align-items: center;
+        font-family: var(--font-Poppins);
+        text-decoration: none;
+        color: black;
+        font-size: 1.2em;
+    }
+
+
+    .container__texto{
+        margin-right: 3em;
+        display: block;
+    }
+
+}

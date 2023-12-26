@@ -1,0 +1,89 @@
+@import url(../styles/header.css);
+@import url(../styles/banner.css);
+@import url(../styles/carrossel.css);
+
+
+
+:root{
+    --cor--fundo: #EBECEE;
+    --branco: #FFF;
+    --font-family:'Poppins', sans-serif;;
+    
+
+}
+
+body{
+    background-color: var(--cor--fundo);
+    font-family: var(--font-family);
+}
+
+hr{
+    margin: 0;
+}
+
+.footer{
+    background-color: white;
+    font-family: var(--font-family);
+    padding: 1.5em;
+}
+
+.footer__link{
+    margin-top: 2em;
+    text-decoration: none;
+    color: black;
+
+}
+
+.lista-rodape{
+    display: none;
+}
+
+
+
+
+@media screen and (min-width: 1024px){
+
+    .footer{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    .footer__link{
+        font-size: 1.5em;
+    }
+     
+
+    .lista-rodape{
+        align-items: center;
+        margin-top: 3em;
+        display: block;
+    }
+
+    .lista-rodape__titulo{
+        color: #858585;
+        margin-bottom: 1.5em;
+    }
+
+    .lista-rodape__item{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 1em 0;
+    }
+    
+    .lista-rodape__link{
+        text-decoration: none;
+        color: black;
+
+    }
+
+}
+
+
+@media screen and (min-width: 1728px){
+    .lista-rodape{
+        border-left: 1px solid #858585;
+        padding-left: 1em;
+    }
+}
